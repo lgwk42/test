@@ -13,7 +13,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     show-sql: true
 
 application:
@@ -22,5 +22,3 @@ application:
     token:
       access-expiration-time: 43200000
       refresh-expiration-time: 604800000
-
-
