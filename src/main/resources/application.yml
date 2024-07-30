@@ -19,6 +19,16 @@ spring:
 application:
   jwt:
     secretKey: 25432A462D4A614E645267556A586E3272357538782F413F4428472B4B625065
-    token:
-      access-expiration-time: 43200000
-      refresh-expiration-time: 604800000
+    expiration: 172800000    # 48시간
+    refreshExpiration: 604800000
+
+springdoc:
+  api-docs:
+    enabled: true
+    version: openapi_3_0
+    path: /v3/api-docs
+  default-consumes-media-type: application/json
+  auto-tag-classes: true
+  swagger-ui:
+    operationsSorter: method
+    path: /swagger-ui.html

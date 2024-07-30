@@ -30,6 +30,7 @@ public class SecurityConfig {
                 .exceptionHandling(handlingConfigures -> handlingConfigures.authenticationEntryPoint(jwtAuthenticationEntryPoint))
                 .authorizeHttpRequests(
                         authorize -> authorize
+                                .requestMatchers("/swagger-ui/**", "/v3/**").permitAll()
                                 .requestMatchers("/auth/**").permitAll()
                                 .anyRequest().authenticated()
                 )
